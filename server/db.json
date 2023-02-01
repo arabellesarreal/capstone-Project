@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "title": "Solo Leveling",
+        "cover": "solo-leveling.jpg"
+    },
+    
+    {
+        "id": 2,
+        "title": "2Solo Leveling",
+        "cover": "2solo-leveling.jpg",
+        "rating": 1
+    },
+
+    {
+        "id": 3,
+        "title": "3Solo Leveling",
+        "cover": "3solo-leveling.jpg",
+        "rating": 2
+    }
+]
