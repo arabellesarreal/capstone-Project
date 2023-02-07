@@ -1,21 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webtoon Tracker</title>
+    <link rel="stylesheet" href="./index.css">
+    <title>Webcomic Tracker</title>
 </head>
 <body>
     <header>
-    <img id = "top_image"src = "https://imgs.search.brave.com/xYMb5e8rKzMtDoc9DbnZBz_fAGSsXCrQ2jy-a95rnL8/rs:fit:1183:887:1/g:ce/aHR0cHM6Ly9zcGVj/dGF0b3JhdS5pbWdp/eC5uZXQvY29udGVu/dC91cGxvYWRzLzIw/MjAvMDUvaVN0b2Nr/XzkwMDMwMTYyNi5q/cGc_YXV0bz1jb21w/cmVzcyxlbmhhbmNl/LGZvcm1hdCZjcm9w/PWZhY2VzLGVudHJv/cHksZWRnZXMmZml0/PWNyb3Amdz0xMTgz/Jmg9ODg3" alt = "bookshelf of light novels and manga"
-    style="display: block; object-fit: cover; border-radius: 0px; width: 100%; height: 30vh; opacity: 1; object-position: center 20%; padding: 0%;">
+        <img id = "top_image"src = "https://imgs.search.brave.com/xYMb5e8rKzMtDoc9DbnZBz_fAGSsXCrQ2jy-a95rnL8/rs:fit:1183:887:1/g:ce/aHR0cHM6Ly9zcGVj/dGF0b3JhdS5pbWdp/eC5uZXQvY29udGVu/dC91cGxvYWRzLzIw/MjAvMDUvaVN0b2Nr/XzkwMDMwMTYyNi5q/cGc_YXV0bz1jb21w/cmVzcyxlbmhhbmNl/LGZvcm1hdCZjcm9w/PWZhY2VzLGVudHJv/cHksZWRnZXMmZml0/PWNyb3Amdz0xMTgz/Jmg9ODg3" alt = "bookshelf of light novels and manga"
+        style="display: block; object-fit: cover; border-radius: 0px; width: 100%; height: 30vh; opacity: 1; object-position: center 20%; padding: 0%;">
     </header>
+
+    <!-- Main -->
     <main>
-    <h1>Webcomic Tracker</h1>
-    <div id = sorter style = "display: flex;">
+        <header>
+        <h1>Webcomic Tracker</h1>
+        </header>
+        <!-- Sorter Section -->
+    <section id = sorter style = "display: flex;">
         <div>Last Updated
             <button class = "sort_button">Arrow</button>
         </div>
@@ -25,45 +29,33 @@
         <div>Alphabetical
             <button class = "sort_button">Arrow</button>
         </div>
-    </div>
+    </section>
+        
     <div id = "page_content">
-        <aside style = "display: float; float: right; padding-left: 1%; padding-right: 1%">
-            <div>Last Read
-                <div>Image</div>
-            </div>
-            <div>Newest Update
-                <div>Image</div>
-            </div>
-            <div>On Hiatus
-                <div>Image</div>
-            </div>
-            <div>Second Chance
-                <div>Image</div>
-            </div>
+        <!-- Side Bar Section -->
+        <aside id = "addNewComicBox">
+            <h3>Add a new comic</h3>
+            <h5 style="margin-top: 15px; margin-bottom: 15px">Comic Title: </h5>
+            <input type="text" placeholder="Comic Name" id="comicName">
+            <h5>Cover Image URL: </h5>
+            <input type="text" placeholder="Comic Picture" id="comicPicture">
+            </br>
+            <h5>Last Chapter Read: </h5>
+            <input type="number" placeholder="Chapter Number" id="comicNumber">
+            </br>
+            <button id="addComic">Submit!</button>
         </aside>
-        <div class="grid-container" id = comic-grid>
-            <div class="grid-item">
-                <div class = "comicImage"> Image </div>
-                <div class = "title"> Title </div>
-                <div class = "status">Status</div>
-                <div class = "progressBar">Progress Bar</div>
-            </div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item" style = "display: flex; flex-direction: column;">Add Comic
-                <button>+</button>
-            </div>
-        </div>
-    </div>
-    </main>
-    <footer>
 
+        <section id="comicDisplay" class= "grid-container"></section>
+        
+    </main>
+
+    <footer>
+        <p>Sponsored by:</p>
+        <img id = "Advertisement" src = "..\ReferenceImage\AddForWork.png">
     </footer>
-    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src = "./index.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
 </body>
+</html>
