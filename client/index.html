@@ -20,15 +20,9 @@
         </header>
         <!-- Sorter Section -->
     <section id = sorter style = "display: flex;">
-        <div>Last Updated
-            <button class = "sort_button">Arrow</button>
-        </div>
-        <div>Last Read
-            <button class = "sort_button">Arrow</button>
-        </div>
-        <div>Alphabetical
-            <button class = "sort_button">Arrow</button>
-        </div>
+        <button class = "sort_button">Last Updated &#8682;</button>
+        <button class = "sort_button">Last Read &#8682;</button>
+        <button class = "sort_button">Alphabetical &#8682;</button>
     </section>
         
     <div id = "page_content">
@@ -43,17 +37,13 @@
             <h5>Last Chapter Read: </h5>
             <input type="number" placeholder="Chapter Number" id="comicNumber">
             </br>
+            </br>
             <button id="addComic">Submit!</button>
         </aside>
 
         <section id="comicDisplay" class= "grid-container"></section>
         
     </main>
-
-    <footer>
-        <p>Sponsored by:</p>
-        <img id = "Advertisement" src = "..\ReferenceImage\AddForWork.png">
-    </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>

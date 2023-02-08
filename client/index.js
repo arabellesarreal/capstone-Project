@@ -3,7 +3,7 @@ const baseURL = 'http://localhost:5678'
 
 const displayComics = document.querySelector('#comicDisplay')
 const addNewComic = document.querySelector('#addComic')
-
+let addingCard = false
 
 const createComicCard = (comic) => {
 
@@ -15,15 +15,12 @@ const createComicCard = (comic) => {
         <img id='coverpicture' alt = "cover image" src="${comic.picture}"/>
         <div id = "comic name">${comic.name}</div>
 
-        <div>
+        <div id = lastChapterRead>
             Last Chapter Read:  
-            <button onclick="updateComic(${comic.id}, 'downChaptersRead')" >-</button> 
+            <button onclick="updateComic(${comic.id}, 'downChaptersRead')" >&#8722;</button> 
             ${comic.chaptersRead}
-            <button onclick="updateComic(${comic.id}, 'upChaptersRead')">+</button>
+            <button onclick="updateComic(${comic.id}, 'upChaptersRead')">&#43;</button>
         </div>
-
-        </br>
-        </br>
         
         <button onclick="deleteComic(${comic.id})">Delete</button>
 
@@ -55,7 +52,7 @@ const getAllComics = () => {
 
 
 const addComic = () => {
-
+    
     displayComics.innerHTML = ``
 
     const name = document.querySelector('#comicName')
